@@ -2,6 +2,7 @@ package com.sms;
 
 import java.util.ArrayList;
 import java.io.*;
+import java.util.List;
 
 public class StudentService {
 
@@ -88,6 +89,10 @@ public class StudentService {
     public void sortByName() {
         studentList.sort((s1, s2) -> s1.getName().compareToIgnoreCase(s2.getName()));
         System.out.println("Students sorted by name.");
+    }
+    
+    public List<Students> getAllStudents() {
+        return studentList;
     }
 
     // Save to file

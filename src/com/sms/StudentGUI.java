@@ -76,7 +76,7 @@ public class StudentGUI {
         JScrollPane scrollPane = new JScrollPane(table);
         scrollPane.setBounds(50, 280, 430, 200);
 
-        // 🔥 Refresh Table Function
+        //  Refresh Table Function
         Runnable refreshTable = () -> {
             model.setRowCount(0);
             for (Students s : service.getAllStudents()) {
@@ -104,7 +104,7 @@ public class StudentGUI {
 
         frame.add(scrollPane);
 
-        // 🔥 ADD
+        //  ADD
         addButton.addActionListener(e -> {
             try {
                 int id = Integer.parseInt(idField.getText());
@@ -127,10 +127,10 @@ public class StudentGUI {
             }
         });
 
-        // 🔥 VIEW
+        //  VIEW
         viewButton.addActionListener(e -> refreshTable.run());
 
-        // 🔍 SEARCH
+        //  SEARCH
         searchButton.addActionListener(e -> {
             try {
                 int id = Integer.parseInt(idField.getText());
@@ -150,7 +150,7 @@ public class StudentGUI {
             }
         });
 
-        // ✏️ UPDATE
+        // ️ UPDATE
         updateButton.addActionListener(e -> {
             try {
                 int id = Integer.parseInt(idField.getText());
@@ -168,7 +168,7 @@ public class StudentGUI {
             }
         });
 
-        // ❌ DELETE
+        //  DELETE
         deleteButton.addActionListener(e -> {
             try {
                 int id = Integer.parseInt(idField.getText());

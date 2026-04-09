@@ -23,6 +23,6 @@ public class Students {
 
     // Display method
     public void display() {
-        System.out.println("ID: " + id + ", Name: " + name + ", Marks: " + marks);
+        System.out.printf("ID: %-5d Name: %-15s Marks: %.2f%n", id, name, marks);
     }
 }

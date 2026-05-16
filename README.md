@@ -1,76 +1,61 @@
-# 🎓 Student Management System (Java)
+# 🎓 Student Management System (Java Full-Stack Enterprise)
 
 ## 📌 Description
-A full-featured **Student Management System** built using Java.  
-This project allows users to manage student records with a graphical interface and persistent storage.
+A fully functional, enterprise-grade **Student Management System** upgraded from a desktop Swing application to a modern, responsive web application. 
+This project is built using the Java Full-Stack architecture (Servlets, JSP, JDBC, MySQL) and features a professional HTML5/CSS3/JavaScript frontend with Bootstrap 5.
 
 ---
 
 ## 🚀 Features
 
-### 🔹 Core Features
-- ➕ Add Student
-- 📋 View Students (Table Format)
-- 🔍 Search Student by ID
-- ✏️ Update Student Details
-- ❌ Delete Student
+### 📋 Core Features
+- ➕ **Add Student:** Register new students with academic & personal details.
+- 👁️ **View Students:** Read all students with a responsive, paginated data table.
+- 🔍 **Search Student:** Dynamic search by name or ID.
+- ✏️ **Update Student:** Edit existing student records seamlessly.
+- 🗑️ **Delete Student:** Secure deletion with confirmation modals.
 
-### 🔹 Advanced Features
-- 💾 File Handling (Data Persistence)
-- ⚠️ Duplicate ID Prevention
-- 🔄 Auto Table Refresh
-- 🧾 Confirmation Dialogs
-- 🖥️ GUI using Swing
-
----
-
-## 🛠️ Technologies Used
-- Java
-- Swing (GUI)
-- ArrayList
-- File Handling (BufferedReader / BufferedWriter)
+### 🛡️ Advanced Features
+- **Authentication:** Secure Admin login with server-side session management and 30-minute timeouts.
+- **Enterprise UI:** Corporate dashboard built with Bootstrap 5, FontAwesome icons, and semantic HTML5.
+- **Data Persistence:** Integrated with MySQL via JDBC using the Data Access Object (DAO) pattern.
+- **Pagination:** Server-side pagination limiting records to 8 per page for performance.
+- **Validation:** Both client-side (HTML5/JS) and server-side validation.
 
 ---
 
-## 🖥️ Application UI
+## 💻 Technologies Used
 
-> # 🎓 Student Management System (Java)
+**Frontend:**
+- HTML5 & CSS3
+- JavaScript
+- JSP (JavaServer Pages)
+- Bootstrap 5
+- FontAwesome 6
 
-## 📌 Description
-A full-featured **Student Management System** built using Java.  
-This project allows users to manage student records with a graphical interface and persistent storage.
+**Backend:**
+- Java 17+
+- Java Servlets (Tomcat 9 compatible)
+- JDBC (Java Database Connectivity)
+- Maven
 
----
-
-## 🚀 Features
-
-### 🔹 Core Features
-- ➕ Add Student
-- 📋 View Students (Table Format)
-- 🔍 Search Student by ID
-- ✏️ Update Student Details
-- ❌ Delete Student
-
-### 🔹 Advanced Features
-- 💾 File Handling (Data Persistence)
-- ⚠️ Duplicate ID Prevention
-- 🔄 Auto Table Refresh
-- 🧾 Confirmation Dialogs
-- 🖥️ GUI using Swing
+**Database:**
+- MySQL 8.x
 
 ---
 
-## 🛠️ Technologies Used
-- Java
-- Swing (GUI)
-- ArrayList
-- File Handling (BufferedReader / BufferedWriter)
+## ⚙️ Setup & Deployment
 
----
+1. **Database:** 
+   - Execute the SQL script located in `sql/schema.sql` on your MySQL server to create the `student_management_db` and necessary tables.
+   - Default admin credentials: `admin` / `admin123`.
 
-## 🖥️ Application UI
+2. **Configuration:**
+   - Update `src/main/java/com/sms/util/DBConnection.java` with your MySQL credentials if they differ from `root` / `root`.
 
-> <img width="656" height="704" alt="image" src="https://github.com/user-attachments/assets/e10ba8eb-2d68-4c94-ac6a-6410e79ae4b2" />
-> <img width="653" height="716" alt="image" src="https://github.com/user-attachments/assets/9f5be127-0e19-4d27-9132-ad58f7e2c00c" />
+3. **Build:**
+   - Package the project using Maven: `mvn clean package`
 
-
+4. **Deploy:**
+   - Deploy the generated `StudentManagementSystem.war` to Apache Tomcat 9.
+   - Access the application at `http://localhost:8080/StudentManagementSystem`.

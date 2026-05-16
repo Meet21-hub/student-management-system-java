@@ -1,4 +1,32 @@
-nbproject/
+# ── Build outputs ─────────────────────────────────────────
+target/
 build/
 dist/
 *.class
+*.war
+*.jar
+
+# ── IDE files ──────────────────────────────────────────────
+.idea/
+*.iml
+.eclipse/
+.settings/
+.classpath
+.project
+nbproject/private/
+nb-configuration.xml
+
+# ── OS files ───────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Logs ──────────────────────────────────────────────────
+*.log
+logs/
+
+# ── Temp ──────────────────────────────────────────────────
+*.tmp
+*.bak
+students.txt
+nbproject/
